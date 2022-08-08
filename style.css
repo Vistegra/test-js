@@ -1,0 +1,205 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    background-color: rgb(247, 247, 247);
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 5%;
+    background: #fff;
+}
+
+.ico {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    margin-right: 10px;
+    border: 1px solid grey;
+    cursor: pointer;
+}
+
+#tile-button {
+    background-image: url(/img/tile.ico);
+    background-size: cover;
+}
+
+#list-button {
+    background-image: url(/img/list.ico);
+    background-size: cover;
+}
+
+.main {
+    margin-top: 60px;
+}
+
+.products-tile {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    grid-gap: 10px;
+}
+
+.products-list {
+    display: flex;
+    flex-direction: column;
+}
+
+#products > div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    background-color: white;
+    border-radius: 15px;
+}
+
+.productName {
+    font-weight: bold;
+    text-align: center;
+    margin: 16px;
+}
+
+.productPrice {
+    font-weight: bold;
+    color: blue;
+}
+
+.productMissing {
+    font-weight: bold;
+    color: red;
+}
+
+.add {
+    width: 200px;
+    height: 60px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    background-color: transparent;
+    border: 1px solid blue;
+    font-weight: bold;
+    color: blue;
+    cursor: pointer;
+}
+
+.add:hover {
+    transition-duration: 0.3s;
+    transform: scale(1.1, 1.1);
+    background-color: blue;
+    color: white;
+}
+
+.add:active {
+    transition-duration: 0s;
+    transform: scale(1.0, 1.0);
+}
+
+.disabled {
+    width: 200px;
+    height: 60px;
+    padding: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.footer {
+    max-height: 35%;
+    position: sticky;
+    bottom: 0;
+    padding-bottom: 40px;
+    background: #fff;
+    overflow: auto;
+}
+
+.footer > div:first-child {
+    display: flex;
+    align-items: center;
+    height: 60px;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+    font-size: 32px;
+}
+
+#cart {
+    display: flex;
+    justify-content: center;
+}
+
+table {
+    width: 90%;
+    text-align: left;
+    border-collapse: collapse;
+}
+
+table tr {
+    height: 35px;
+}
+
+table thead tr,
+table tbody tr:nth-of-type(even) {
+    background-color: rgb(225, 238, 241);
+}
+
+table th:nth-of-type(1) {
+    width: 44%;
+}
+
+table th:nth-of-type(2) {
+    width: 24%;
+}
+
+table th:nth-of-type(3) {
+    width: 18%;
+}
+
+table th:nth-of-type(4) {
+    width: 10%;
+}
+
+table tbody {
+    font-weight: bold;
+}
+
+table td,
+thead th {
+    border-bottom: 1px solid grey;
+}
+
+input {
+    width: 60%;
+}
+
+.plus,
+.minus,
+.delete {
+    background-color: transparent;
+    border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+.plus:hover,
+.minus:hover,
+.delete:hover {
+    box-shadow: 1px 1px 2px;
+}
+
+.plus:active,
+.minus:active,
+.delete:active {
+    box-shadow: inset 1px 1px 2px;
+}
